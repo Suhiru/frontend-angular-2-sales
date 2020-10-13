@@ -21,11 +21,11 @@
         <td>{{tempSalesdata.firstName}}</td>
         <td>{{tempSalesdata.lastName}}</td>
         <td>{{tempSalesdata.email}}</td>
-        <td>{{tempSalesdata.salesVolume}}</td>
+        <td>{{tempSalesdata.salesVolume | currency: 'USD'}}</td>
 
         <td>
 
-                <div *ngIf= "tempSalesdata.salesVolume >60000;
+                <div *ngIf= "tempSalesdata.salesVolume >= 60000;
                      else myElseBlock">Yes</div>
                 <ng-template #myElseBlock>No</ng-template>
         </td>
